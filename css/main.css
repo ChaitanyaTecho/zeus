@@ -1,0 +1,95 @@
+body {
+    font-family: sans-serif;
+}
+
+.input-box {
+    text-align: center;
+}
+
+form input[type="number"] {
+    width: 70px;
+    height: 30px;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+form input[type="submit"] {
+    padding: 11px;
+    background: transparent;
+    position: relative;
+    border: 1px solid #ccc;
+    top: -1px;
+    cursor: pointer;
+}
+
+.spinner-box {
+    position: relative;
+    margin: 50px auto;
+    width: 500px;
+    height: 500px;
+    border: 10px solid #ccc;
+    border-radius: 50%;
+    background: #ccc;
+    overflow: hidden;
+}
+
+.spinner-box .markers {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -25px;
+    width: 0;
+    height: 0;
+    border: 25px solid #fff;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    z-index: 9999;
+}
+
+.spinner-box .spinner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /*transform: rotate(-50deg);*/
+    transition: all 9s cubic-bezier(0, 0, 0, 1.01) 0s;
+}
+
+.spinner-box .item {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    transform-origin: 0 100%;
+    /* overflow: hidden; */
+}
+
+#btn-start {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -50px 0 0 -50px;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 50px;
+    z-index: 9999;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#btn-start:active, #btn-start:focus {
+    outline: none;
+}
+
+.item div {
+    position: absolute;
+    top: -215px;
+    left: 0;
+    transform: rotate(15deg) translateX(50%);
+    font-size: 20px;
+    color: #fff;
+}
